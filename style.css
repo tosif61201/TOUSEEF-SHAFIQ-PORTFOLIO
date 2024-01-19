@@ -30,6 +30,7 @@ body{
     min-height: 100vh;
     background: var(--bg-color);
     color: var(--text-color);
+    overflow: hidden;
 }
 
 .wrapper{
@@ -37,8 +38,21 @@ position: relative;
 width: 66rem;
 height: 45rem;
 padding: 2rem;
- 
+ animation: show-animate 2s forwards;
 }
+
+
+@keyframes show-animate{
+    0%,30%{
+        opacity: 0;
+        transform: rotate(-20deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
 
 .cover{
     position: absolute;
@@ -51,6 +65,10 @@ padding: 2rem;
     border-top-left-radius: .6rem;
     border-bottom-left-radius: .6rem;
     transform-origin:right ;
+}
+
+.cover.cover-right{
+    z-index: 100;
 }
 
 .cover.cover-left{
