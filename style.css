@@ -316,8 +316,8 @@ transform: rotateY(180deg);
 .skills-content .content{
     display: flex;
     flex-wrap: wrap;
-    gap: .4rem;
-
+    column-gap: .8rem;
+row-gap: .4rem;
 }
 
 .skills-content .content span{
@@ -346,3 +346,116 @@ color: var(--main-color);
     font-size: smaller;
 }
 
+.project-box .img-box{
+    display: flex;
+    width: 100%;
+    height: 15rem;
+    border: var(--border);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.project-box .img-box img{
+    width: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.project-box .img-box:hover img{
+    transform: scale(1.1);
+}
+
+.project-box .info-box{
+    margin: 1rem 0 1.5rem;
+}
+
+.project-box .info-box .info-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.project-box .info-box .info-title h3{
+    font-size: 1.3rem;
+
+}
+
+.project-box .info-box .info-title a{
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+}
+
+.project-box .btn-box{
+    display: flex;
+    justify-content: center;
+}
+
+.contect-box{
+    text-align: center;
+}
+
+.contect-box .field{
+    width: 100%;
+    background: transparent;
+    border: var(--border);
+    border-radius: .3rem;
+    padding: .8rem;
+    font-size: 1rem;
+    margin-bottom: .8rem;
+    color: var(--text-color);
+}
+
+.contect-box .field::placeholder{
+    color: var(--text-color);
+}
+
+.contect-box textarea{
+    resize: none;
+    height: 15rem;
+}
+
+.contect-box .btn{
+    cursor: pointer;
+}
+
+.back-profile{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    bottom: 2rem;
+    right: 2rem;
+    background: transparent;
+    border: var(--border);
+    border-radius: .3rem;
+    font-size: 1.1rem;
+    color: var(--main-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+.back-profile:hover{
+    background: var(--main-color);
+    color:#fff;
+    border-radius: 50%;
+}
+
+.back-profile p{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(.5);
+    color: var(--main-color);
+    font-size: 1rem;
+    opacity: 0;
+    /* transition: .5s; */
+}
+
+.back-profile p:hover{
+opacity: 1;
+transform: translateX(-50%) scale(1);
+top: -1.8rem;
+}
