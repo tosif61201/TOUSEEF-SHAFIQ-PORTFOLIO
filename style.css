@@ -38,6 +38,7 @@ position: relative;
 width: 66rem;
 height: 45rem;
 padding: 2rem;
+/* perspective: 250rem; */
  animation: show-animate 2s forwards;
 }
 
@@ -69,6 +70,7 @@ padding: 2rem;
 
 .cover.cover-right{
     z-index: 100;
+    transition: transform 1s cubic-bezier(.645, .045, .355, 1);
 }
 
 .cover.cover-left{
@@ -124,6 +126,12 @@ transform: rotateY(180deg);
 .profile-page .social-media{
     margin: .6rem 0 .8rem;
 }
+
+.profile-page .social-media .hide1, .hide2{
+    display: none;
+}
+
+
 
 .profile-page .social-media a{
     display: inline-flex;
@@ -229,7 +237,7 @@ transform: rotateY(180deg);
 .workeduc-box .workeduc-content{
     position:relative;
     padding-left: 1.6rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: .8rem;
 }
 
 .workeduc-box .workeduc-content::before{
@@ -439,6 +447,38 @@ color: var(--main-color);
 .contect-box .btn{
     cursor: pointer;
 }
+
+.contect-box .social-media .hide1, .hide2{
+    display: none;
+}
+
+.social-media{
+    margin: .6rem 0 .8rem;
+   
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border: .11rem solid #00abf0;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: var(--main-color);
+    margin: 0 .2rem;
+    transition: .5s;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color:#fff;
+}
+
+
+
 
 .back-profile{
     position: absolute;

@@ -29,7 +29,7 @@ const contectMeBtn = document.querySelector('.btn.contect-me')
 contectMeBtn.onclick = ()=>{
     pages.forEach((page, index)=>{
         setTimeout(()=>{
-            page.classList.add('turn');
+            page.classList.add('turn-1');
 
             setTimeout(()=>{
                 page.style.zIndex = 200 + index;
@@ -67,3 +67,31 @@ backProfileBtn.onclick = () =>{
     },(index + 1) * 200 + 100 )
     })
 }
+
+//Opening Animation
+const coverRight = document.querySelector('.cover.cover-right')
+
+//For Right Cover
+setTimeout(()=>{
+    coverRight.classList.add('turn');
+}, 2100)
+
+setTimeout(()=>{
+    coverRight.style.zIndex= -1;
+}, 2800)
+
+//For All Pages
+
+pages.forEach((_, index)=>{
+    setTimeout(()=>
+    {
+        reverseIndex();
+        pages[pageNumber].classList.remove('turn');
+
+    setTimeout(()=>{
+        reverseIndex();
+        pages[pageNumber].style.zIndex = 10 + index;
+    }, 500)
+
+},(index + 1) * 200 + 2500 )
+})
